@@ -1,7 +1,3 @@
-from DrawingPanel import *
-
-import random
-
 """
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
@@ -10,21 +6,11 @@ import random
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 """
 from DrawingPanel import *
+import random
 
 p = DrawingPanel(500, 500)
 
 def main():
-    color_value = random.randint(0, 255)
-    color = color_value, color_value, color_value
-    
-    xpos = random.randint(0, 240)
-    ypos = random.randint(0, 140)
-    
-    rect_width = random.randint(25, 60)
-    rect_height = random.randint(25, 60)
-    
-    p.fill_rect(xpos, ypos, rect_width, rect_height, color)
-
     p.window.bind("<Button-1>", raises)
     p.window.bind("<Button-3>", lower)
     p.window.bind("<Button-2>", lower)
@@ -44,8 +30,19 @@ def main():
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 """
 def add(event):
-    #TODO: Called when the user presses n. Adds a tile to the top of the list
-    pass
+    add_tile = []
+    color_value = random.randint(0, 255)
+    color = color_value, color_value, color_value
+            
+    xpos = random.randint(0, 440)
+    ypos = random.randint(0, 440)
+            
+    rect_width = random.randint(25, 60)
+    rect_height = random.randint(25, 60)
+            
+    add_tile = p.fill_rect(xpos, ypos, rect_width, rect_height, color) 
+        
+
 
 def add_all():
     #TODO: Called when the program starts. Adds 50 tiles (as described in add)
