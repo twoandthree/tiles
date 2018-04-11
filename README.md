@@ -29,18 +29,20 @@ def main():
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 """
+tiles = []
+
 def add(event):
-    add_tile = []
-    color_value = random.randint(0, 255)
-    color = color_value, color_value, color_value
+    color = (random.randint(0, 255), random.randint(0, 255), random.randint(0, 255))
             
     xpos = random.randint(0, 440)
     ypos = random.randint(0, 440)
             
     rect_width = random.randint(25, 60)
     rect_height = random.randint(25, 60)
-            
-    add_tile = p.fill_rect(xpos, ypos, rect_width, rect_height, color) 
+    
+    tile = (xpos, ypos, rect_width, rect_height, color)
+    tiles.append(tile)
+    # tiles = p.fill_rect(xpos, ypos, rect_width, rect_height, color) 
         
 
 
