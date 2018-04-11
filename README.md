@@ -92,8 +92,3 @@ def shuffle(event):
     pass
 
 main()
-    
-    
-
-    
-
